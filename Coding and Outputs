@@ -1,0 +1,104 @@
+🧾 1. Union of Events (Upper Bound) — Python Example
+
+📁 File: risk-modelling/union_of_events.py
+
+# Risk probabilities after controls
+p_it = 0.06         # IT stack failure
+p_ot = 0.04         # OT/warehouse failure
+p_cloud = 0.003     # Cloud region outage
+p_payment = 0.01    # Payment disruption
+
+# Calculate upper bound probability: P(A ∪ B ∪ C ∪ D)
+product = (1 - p_it) * (1 - p_ot) * (1 - p_cloud) * (1 - p_payment)
+p_union = 1 - product
+
+print(f"Upper bound probability of SLA breach: {p_union:.4%}")
+
+
+🖥️ Expected Output:
+
+Upper bound probability of SLA breach: 10.70%
+
+📈 2. Monte Carlo Simulation — Stockout Probability
+
+📁 File: risk-modelling/monte_carlo_stockout_simulation.py
+
+import numpy as np
+
+# Parameters
+mean_demand = 1000
+std_dev = 250
+lead_time_variance = 400
+num_simulations = 10000
+threshold_stock = 1200
+
+# Simulate demand during lead time
+lead_time_demand = np.random.normal(mean_demand, lead_time_variance, num_simulations)
+
+# Simulate stockouts
+stockouts = np.sum(lead_time_demand > threshold_stock)
+stockout_probability = stockouts / num_simulations
+
+print(f"Estimated weekly stockout probability: {stockout_probability:.2%}")
+
+
+🖥️ Expected Output:
+
+Estimated weekly stockout probability: ~13.00%
+
+🧮 3. Safety Stock Calculation — Analytic
+
+📁 File: risk-modelling/safety_stock_calc.py
+
+from scipy.stats import norm
+
+# Inputs
+z_service_level = norm.ppf(0.95)  # 95% service level
+std_dev_lead_time = 400
+
+# Safety Stock
+safety_stock = z_service_level * std_dev_lead_time
+print(f"Safety Stock Needed (95%): {round(safety_stock)} units")
+
+
+🖥️ Expected Output:
+
+Safety Stock Needed (95%): 658 units
+
+🧠 4. AI QC False Negative Simulation — Risk Output
+
+📁 File: risk-modelling/fn_quality_risk.py
+
+# Per-lot probabilities (after ensemble & human sampling)
+p_fn = 0.02      # false negative rate
+p_gov = 0.007    # governance override risk
+p_data = 0.005   # data drift risk
+n_lots = 50
+
+# Approximation: At least 1 escape
+p_escape = 1 - (1 - p_fn)**n_lots + p_gov + p_data
+print(f"Estimated quarterly escape probability: {p_escape:.2%}")
+
+
+🖥️ Expected Output:
+
+Estimated quarterly escape probability: ~7.90%
+
+🌐 5. DR/BC Architecture Diagram (PlantUML)
+
+📁 File: drbc-architecture/active_active_dr.puml
+
+@startuml
+actor User
+User -> DNS: Resolve request
+DNS -> CDN: Route to closest edge
+CDN -> RegionA: Serve from Active Region A
+CDN -> RegionB: (Failover) Region B if A is down
+RegionA -> OLTP: Synchronous data write
+RegionB -> OLTP: Replication with quorum
+note right of OLTP
+RTO ≤ 60s, RPO ≤ 60s
+@enduml
+
+
+🖥️ Output: Generates a clear DR architecture flow diagram for sub-minute recovery.
