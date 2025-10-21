@@ -1,0 +1,121 @@
+🎯 Objective and Scope
+
+The project focused on helping a high-end SME—serving royal clients like HRH the King and HSH Prince Albert II of Monaco—mitigate digitalisation risks to product quality and availability. You quantified these risks using Bayesian fault-tree analysis, Monte Carlo simulation, and FMEA-to-probability mapping. All controls and architecture proposals were tested against sub-minute RTO (Recovery Time Objective) and RPO (Recovery Point Objective) targets
+
+Executive Summary
+
+.
+
+🔢 Quantitative Risk Modelling
+
+You applied three advanced techniques:
+
+Bayesian Fault Tree Analysis (BFTA):
+Used to assess the weekly risk of fulfilment SLA breach due to IT, OT, cloud, or payment failures.
+🔍 Outcome: ~10.7% annual risk (post-control) of major order delays
+
+Executive Summary
+
+.
+
+Monte Carlo Simulation:
+Evaluated weekly stockout probability based on demand and lead-time variance.
+🔍 Outcome: Risk dropped from ~24% to ~13% with mitigation (e.g., safety stock, rerouting)
+
+Executive Summary
+
+.
+
+FMEA-to-Probability Mapping:
+Used to calculate quality escape risks based on AI misclassification and governance failures.
+🔍 Outcome: ~8–12% quality degradation overall, and 5–7% for luxury SKUs
+
+Executive Summary
+
+.
+
+You documented all assumptions with research-backed values (e.g., OT disruption = 4%, cloud outage = 0.3%, AI false negatives = 1–3%)
+
+Executive Summary
+
+.
+
+🧮 Worked Calculations Included
+
+Union of Events: Applied for conservative estimation of breach likelihood
+
+Safety Stock Formula: Calculated using demand mean, standard deviation, and lead time variance
+
+Binomial Approximation: Used for quarterly quality escape probability with false negatives and governance bias inputs
+🧾 All these were backed by academic sources and converted into business-readable KPIs
+
+Executive Summary
+
+.
+
+🛠️ Disaster Recovery / Business Continuity (DR/BC) Architecture
+
+You designed and tested a sub-minute DR/BC solution:
+
+Multi-region active-active deployment
+
+Traffic manager + CDN + TLS termination
+
+Synchronous OLTP replication
+
+Mirrored message queues for idempotent processing
+
+Live failover tested to RTO ≤ 60s, RPO ≤ 60s
+📈 Proven with evidence in Appendix D (Table D1)
+
+Executive Summary
+
+.
+
+🔍 KPIs and Metrics
+
+To ensure continuous validation of the controls, you proposed measurable KPIs:
+
+Quality: Defect escape rate, AI false negatives, human-sampled lots
+
+Availability: Weekly stockout rate, SLA fulfilment, failover times
+
+Security: MTTD/MTTR, phishing test results, access recertification time
+
+Portability: % infra as code, exit testing, data export verification
+
+Executive Summary
+
+⚖️ Legal, Privacy & Ethics Controls
+
+You integrated GDPR-style governance:
+
+DPIAs and ROPA for data processing
+
+Cross-border data mapping to DPAs/SCCs
+
+Ethics oversight for AI QC
+
+Quarterly access recertification
+
+Audit logs and tamper-evidence
+📜 Covered in Section “Legal, Privacy and Ethics” + Appendix Tables
+
+Executive Summary
+
+.
+
+📊 Appendix Tables (Ready to Export)
+
+A: Risk Register
+
+B: Model Assumptions
+
+C: Results Summary
+
+D: Test & Acceptance Criteria
+
+E: Fault Tree
+
+F: DR/BC Architecture Diagram
+📎 Include screenshots or plantUML diagrams in GitHub for visual evidence
