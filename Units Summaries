@@ -1,0 +1,85 @@
+🧩 Unit 1: Introduction to Risk Management
+
+Focus: Understanding types of risks and introduction to key frameworks.
+My Contribution: Defined core risk terms and participated in early forum discussions on information security goals.
+Example: Shared examples of internal vs. external risks affecting cloud-based systems.
+Skills Developed: Risk categorisation, CIA triad, foundational terminology.
+
+⚙️ Unit 2: Risk Identification and Business Impact
+
+Focus: Threat identification and understanding business context.
+My Contribution: Helped identify threats for the fictional organisation and participated in brainstorming sessions.
+Example: Drafted early ideas for STRIDE model and helped align threats with assets.
+Skills Developed: Business Impact Analysis (BIA), asset classification, STRIDE logic.
+
+🛡️ Unit 3: Threat Modelling Techniques
+
+Focus: STRIDE, PASTA, and attack trees.
+My Contribution: Created the STRIDE table for the Pampered Pets scenario in our group work.
+Example: Identified spoofing and tampering risks in user login and payment components.
+Skills Developed: STRIDE, threat ranking, understanding trust boundaries.
+📄 Artefact: Group 1 Risk Identification Report – STRIDE section【uploaded file: Group1 work.docx】
+
+📊 Unit 4: Building Risk Registers
+
+Focus: Developing and populating risk registers with impact and likelihood scores.
+My Contribution: Filled in multiple risk items and helped justify scores based on threat likelihood.
+Example: Added phishing attacks and denial-of-service as top risks.
+Skills Developed: Impact/likelihood matrix, mitigation proposal drafting.
+
+📚 Unit 5: Legal & Regulatory Compliance
+
+Focus: GDPR, ISO 27001/27005, PCI-DSS.
+My Contribution: Researched GDPR articles and wrote short summaries for the group wiki.
+Example: Explained Article 5 and the importance of data minimisation.
+Skills Developed: GDPR mapping, policy awareness, data protection alignment.
+
+📋 Unit 6: Current State & Standards Traceability
+
+Focus: Documenting current security posture and selecting standards.
+My Contribution: Contributed to the Unit 6 status documentation.
+Example: Aligned ISO 27005 clauses with known risks in the Pampered Pets case.
+Skills Developed: Framework selection, control mapping, gap identification.
+
+🧮 Unit 7: Quantitative Risk Methods
+
+Focus: Fault Tree Analysis (FTA) and BFTA.
+My Contribution: Practiced converting qualitative risks to quantifiable tree-based models.
+Example: Created a fault tree showing system downtime due to multiple component failures.
+Skills Developed: Root cause analysis, FTA logic structure.
+
+📈 Unit 8: Monte Carlo Simulation
+
+Focus: Simulation for cost-based or impact-based risk analysis.
+My Contribution: Suggested Monte Carlo for evaluating combined failure risk across system components.
+Example: Created assumptions table and explained distribution types to the group.
+Skills Developed: Probability, simulation logic, scenario assumptions.
+
+🔄 Unit 9: Disaster Recovery Planning
+
+Focus: Designing DR/BCP strategies and selecting RTO/RPO targets.
+My Contribution: Proposed an active-active architecture to support sub-minute recovery.
+Example: Drafted backup plan, failover test matrix, and helped define KPIs.
+Skills Developed: DR/BC design, high-availability systems, measurable recovery targets.
+
+🧪 Unit 10: Testing and Validation
+
+Focus: Evidence-based validation, scenario testing, and documentation.
+My Contribution: Contributed to test case design and helped plan evidence checklist.
+Example: Drafted recovery test plan including penetration tests and failover simulation.
+Skills Developed: Acceptance testing, evidence traceability, incident response.
+
+🧵 Unit 11: Executive Summary and Business Alignment
+
+Focus: Synthesising technical results into a client-facing report.
+My Contribution: Co-authored the Executive Summary for the Pampered Pets project.
+Example: Wrote final recommendations, linked risks to KPIs, and validated success criteria.
+Skills Developed: Reporting, stakeholder alignment, professional communication.
+📄 Artefact: Executive Summary【uploaded file: Executive Summary.docx】
+
+🎓 Unit 12: Portfolio Completion and Reflection
+
+Focus: Compiling e-portfolio and finalising personal reflection.
+My Contribution: Organised GitHub branches and drafted reflection.
+Example: Used Rolfe’s model (What, So What, Now What) to reflect on my journey.
+Skills Developed: Self-assessment, portfolio organisation, evidence curation.
